@@ -15,7 +15,7 @@ $(document).ready(function(){
 			method: 'get',
 			cache: true,
 				success: function(data){
-				console.log(data);
+				console.log(data.current_observation.observation_location.full);
 				// var location = (data.current_observation.observation_location.city);
 				// var temp = (data.current_observation.temp_f);
 				// $("body").append("<div id='climate'>The current temperature in " + location + " is " + temp + " degrees</div>");
