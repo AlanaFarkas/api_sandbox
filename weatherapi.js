@@ -15,17 +15,10 @@ $(document).ready(function(){
 			method: 'get',
 			cache: true,
 				success: function(data){
-				console.log(data.current_observation.observation_location.full);
-				// var location = (data.current_observation.observation_location.city);
-				// var temp = (data.current_observation.temp_f);
-				// $("body").append("<div id='climate'>The current temperature in " + location + " is " + temp + " degrees</div>");
-				// if(temp >= 60) {
-				// 	var rando = warm[Math.floor(Math.random() * warm.length)];
-				// 	$("body").append(rando);
-				// } else {
-				// 	var rando = cold[Math.floor(Math.random() * warm.length)];
-				// 	$("body").append(rando);
-				// }
+				var zip = data.current_observation.observation_location.full;
+				console.log(zip);
+
+				$("body").append("<div class='zip'>" + zip + "</div>");
 		   	}
 
 
