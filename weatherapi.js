@@ -3,11 +3,17 @@ $(document).ready(function(){
 	$("#submit-button").click(function(e){
 		e.preventDefault();
 		var zip = $("#zip").val();
-		// console.log(zip);
-		
+		var dropdown = $("#dropdown").val();
 
-		var cold = ["Brrr it's cold", "Shit, stay inside", "Cancel all your plans, it's way too cold out"];
-		var warm = ["Great, it's warm out!", "Awww yeah, tank top weather!", "Flip flops, dude"];
+
+
+
+
+
+
+
+
+		console.log(dropdown);
 
 		$.ajax({
 			url: "http://api.wunderground.com/api/09f8aa654d3c3800/conditions/q/" + zip +".json",
