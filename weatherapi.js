@@ -1,19 +1,13 @@
 $(document).ready(function(){
 
-	$("#submit-button").click(function(e){
+	$("#submit-button, #submit-button-select").click(function(e){
 		e.preventDefault();
-		var zip = $("#zip").val();
-		var dropdown = $("#dropdown").val();
+		var zip = $("#zip-input").val();
+		// console.log(zip);
 
+		var select = $("#zip-select option:selected").val()
+		console.log(select);
 
-
-
-
-
-
-
-
-		console.log(dropdown);
 
 		$.ajax({
 			url: "http://api.wunderground.com/api/09f8aa654d3c3800/conditions/q/" + zip +".json",
