@@ -21,20 +21,15 @@ $(document).ready(function(){
 
 	$("#submit-button-select").click(function(e){
 		e.preventDefault();
-		var zip = $("#zip-select").val();
-		
-		// var select = $("#zip-select option:selected").val()
-		// console.log(select);
 
-		var str = "";
+		var zip = "";
   		$("select option:selected").each(function () {
-        	str += $(this).text() + " ";
-        	console.log(str);
+        	zip += $(this).text() + " ";
+        	console.log(zip);
       	});
 
-
 		$.ajax({
-			url: "http://api.wunderground.com/api/09f8aa654d3c3800/conditions/q/" + str +".json",
+			url: "http://api.wunderground.com/api/09f8aa654d3c3800/conditions/q/" + zip +".json",
 			dataType: 'json',
 			method: 'get',
 			cache: true,
