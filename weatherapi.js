@@ -4,6 +4,12 @@ $(document).ready(function(){
 		e.preventDefault();
 		var zip = $("#zip-input").val();
 
+		// LOAD TEST
+		$(".load-container").load('load.html');
+
+		// LOAD TEST
+
+
 		$.ajax({
 			url: "http://api.wunderground.com/api/09f8aa654d3c3800/conditions/q/" + zip +".json",
 			dataType: 'json',
