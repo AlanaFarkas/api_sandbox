@@ -6,7 +6,6 @@ $(document).ready(function(){
 
 		// LOAD TEST
 		$(".load-container").load('load.html');
-
 		// LOAD TEST
 
 
